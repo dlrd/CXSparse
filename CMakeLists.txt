@@ -1,11 +1,11 @@
 #\-------------------------------------- . -----------------------------------/#
-# Filename : CMakeList.txt               | CXParse CMake port                  #
+# Filename : CMakeList.txt               | CXSParse CMake port                 #
 # Author   : Alexandre Buge              |                                     #
 # Started  : 24/08/2020 10:21            |                                     #
 #/-------------------------------------- . -----------------------------------\#
-project(CXParse CXX)
+project(cxsparse CXX)
 
-set(CXPARSE_SOURCE 
+set(CXSPARSE_SOURCE 
   Source/cs_add.c
   Source/cs_amd.c
   Source/cs_chol.c
@@ -61,9 +61,9 @@ set(CXPARSE_SOURCE
   Include/cs.h
 )
 
-SET_SOURCE_FILES_PROPERTIES(${CXPARSE_SOURCE} PROPERTIES LANGUAGE CXX)
+SET_SOURCE_FILES_PROPERTIES(${CXSPARSE_SOURCE} PROPERTIES LANGUAGE CXX)
 
-add_library(${PROJECT_NAME} STATIC ${CXPARSE_SOURCE})
+add_library(${PROJECT_NAME} STATIC ${CXSPARSE_SOURCE})
 
 target_include_directories(${PROJECT_NAME} PUBLIC Include)
 set_target_properties(${PROJECT_NAME} PROPERTIES CXX_STANDARD 11)
