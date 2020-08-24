@@ -13,6 +13,8 @@
 #ifndef NCOMPLEX
 #include <complex>
 typedef std::complex<double> cs_complex_t ;
+#define creal std::real // Smode Tech
+#define cimag std::imag // Smode Tech
 #endif
 extern "C" {
 #else
